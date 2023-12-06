@@ -2,8 +2,8 @@ import smtplib
 import random as rd
 import datetime as dt
 
-email = "robson.juan@ufrpe.br"
-password = "frzaujrypyrqesvg"
+email = ""
+password = ""
 
 def check_date():
     date = dt.datetime.now()
@@ -16,7 +16,7 @@ def get_quote():
     with open("quotes.txt", mode="r") as file:
         quotes_list = file.readlines()
         quote = rd.choice(quotes_list)
-    subject = "Subject:Happy Birthday, Juan\n\n"
+    subject = "Subject:Happy Birthday, Anonymous\n\n"
     message = subject + quote
     return message
     
