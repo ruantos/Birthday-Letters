@@ -2,12 +2,13 @@ import pandas as pd
 import random as rd
 import datetime as dt
 import smtplib
+import os
 
 date = dt.datetime.now()
 MONTH = date.month
 DAY = date.day
-EMAIL = ""
-PASSWORD = ""
+EMAIL = os.environ.get("email")
+PASSWORD = os.environ.get("password")
 
 info = pd.read_csv("birthdays.csv")
 
